@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  background: #cee7fe;
+  color: #111;
+  font-family: Arial;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+  position: sticky;
+  top: 0;
+  background: #cee7fe;
+}
+nav a {
+  color: #4a6584;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 20px;
+}
+#logo {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 160px;
+}
+#hero img {
+  height: 70vh;
+  border-radius: 12px;
+}
+#hero h1 {
+  font-size: 56px;
+  margin: 0;
+}
+#hero p {
+  font-size: 18px;
+  margin: 20px 0 50px;
+  color: #4a6584;
+}
+#btn {
+  background: #111;
+  color: #f4f8fc;
+  padding: 18px 50px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 18px;
+}
+#hero div {
+  white-space: nowrap;
+}
+.page {
+  display: none;
+  padding: 0 160px;
+  scroll-margin-top: 100px;
+}
+.page:target {
+  display: block;
+}
+body:has(.page:target) #hero {
+  display: none;
+}
+#resume iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
+#resume:target {
+  display: block;
+}
+body:has(#resume:target) #hero {
+  display: none;
+}
+#about p {
+  line-height: 1.6;
+}
+#about blockquote {
+  background: rgba(74, 101, 132, 0.2);
+  border-radius: 12px;
+  padding: 20px 30px;
+  font-style: italic;
+  margin: 0 0 30px;
+}
